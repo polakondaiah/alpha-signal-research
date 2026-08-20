@@ -2,6 +2,9 @@
 
 **For:** Quantitative Researcher, WorldQuant (Mumbai) — extends flagship data pipeline with IC-based alpha evaluation (`IC = rank correlation(signal, forward return)`).
 
+## Description
+A research notebook that systematically evaluates candidate alpha signals on NSE data. It builds six signals (momentum 10/20/60, mean-reversion z-score, volatility and volume), computes daily rank Information Coefficients against 1/5/20-day forward returns, and analyzes IC decay and stability across sub-periods. The workflow follows a structured alpha research process (hypothesis → factor construction → IC/IR estimation → robustness checks) and outputs tables and decay plots for comparison. Built to show signal research hygiene rather than a single backtest P&L.
+
 ## Data
 Reuses `../app-0001-.../project/data/prices.csv` (8 NSE large-caps, 2020-2026, 13,856 rows). No new fetch needed — same universe/pipeline.
 
@@ -52,8 +55,3 @@ python3 alpha_research.py
 - Small universe (8) → high IC variance; widen to 50+ NSE stocks with more time.
 - Synthetic data has no true alpha — table correctly shows near-zero ICs; do not claim profitability.
 - Next step: out-of-sample split, multiple-testing correction (Bonferroni/DefDR).
-
-## Interview questions
-- Why IC not Sharpe for research? (isolates signal from execution)
-- How to test overfitting with 8 stocks? (stability across periods, decay shape)
-- Which signal most stable and why vol_20 is vol-persistence not alpha?

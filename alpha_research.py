@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import json
 
 _candidates = [
-    Path(__file__).parent.parent.parent / "app-0001-nk-securities-quant-researcher" / "project-backtested-strategy-engine" / "data" / "prices.csv",
+    Path(__file__).parent.parent.parent / "app-0001-nk-securities-quant-researcher" / "backtested-strategy-engine" / "data" / "prices.csv",
     Path(__file__).parent.parent.parent / "app-0001-nk-securities-quant-researcher" / "project" / "data" / "prices.csv",
 ]
 DATA = next((p for p in _candidates if p.exists()), _candidates[0])
