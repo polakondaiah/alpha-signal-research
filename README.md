@@ -1,7 +1,5 @@
 # Alpha Signal Research Notebook
 
-**For:** Quantitative Researcher, WorldQuant (Mumbai) — extends flagship data pipeline with IC-based alpha evaluation (`IC = rank correlation(signal, forward return)`).
-
 ## Description
 A research notebook that systematically evaluates candidate alpha signals on NSE data. It builds six signals (momentum 10/20/60, mean-reversion z-score, volatility and volume), computes daily rank Information Coefficients against 1/5/20-day forward returns, and analyzes IC decay and stability across sub-periods. The workflow follows a structured alpha research process (hypothesis → factor construction → IC/IR estimation → robustness checks) and outputs tables and decay plots for comparison. Built to show signal research hygiene rather than a single backtest P&L.
 
@@ -43,7 +41,7 @@ No signal shows stable IC across all periods on synthetic data — correct concl
 
 ## Distinction: IC vs Backtest Sharpe
 - **IC** = predictive power of *signal* before portfolio construction (research question: does this rank stocks?).
-- **Sharpe** = performance after position sizing, costs, risk — conflates signal + execution. WorldQuant posting asks for "identify high-quality predictive signals (alphas)" via structured research — IC is the standard language.
+- **Sharpe** = performance after position sizing, costs, risk — conflates signal + execution. IC is the standard language for alpha research.
 
 ## Reproduce
 ```bash
